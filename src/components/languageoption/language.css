@@ -1,0 +1,43 @@
+.container_language {
+  margin-right: 20px;
+  border: none;
+  display: flex;
+}
+
+.imgs_language{
+  width: 35px;
+  cursor: pointer;
+  margin: 0 7px;
+}
+
+.select_change {
+  width: 90px;
+  background: transparent;
+  border: transparent;
+  border-color: transparent;
+  color: gray;
+  position: absolute;
+  top: 28px;
+  right: 35px;
+  cursor: pointer;
+}
+
+select:focus {
+  border: none;
+}
+
+.options {
+  width: 30px;
+  background-image: url("../../assets/bandera1.png");
+}
+
+@media (max-width: 600px) {
+  .container_language{
+    margin-left: -100px;
+  }
+
+  .imgs_language{
+    width: 30px;
+    margin: 0 2px;
+  }
+}

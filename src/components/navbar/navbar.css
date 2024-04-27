@@ -1,0 +1,224 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+  transition: 0.6s ease-in-out;
+  animation: slideFromLeft 0.5s ease-in;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+nav.active {
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157);
+  background-color: #000000;
+  transition: 0.6s ease-in-out;
+}
+
+.img_finance {
+  width: 40%;
+  height: auto;
+}
+
+.span_logo {
+  width: 30%;
+  font-size: 15px;
+  margin-left: -14%;
+  color: #149dff;
+}
+
+.span_logo2{
+  display: none;
+}
+nav ul {
+  display: flex;
+  cursor: pointer;
+}
+.active {
+  background-color: #ffeb14;
+  color: #ffffff;
+  box-shadow: 5px 10px 30px rgba(193, 198, 64, 0.411);
+  transition: all ease 0.2s;
+}
+.active:hover {
+  background-color: whitesmoke;
+  color: #ffffff;
+  box-shadow: 5px 10px 30px rgba(198, 64, 64, 0.411);
+  transition: all ease 0.2s;
+}
+nav ul li a {
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #383838;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+nav ul li a:hover {
+  background-color: #ffeb14;
+  color: gray;
+  box-shadow: 5px 10px 30px rgba(255, 221, 2, 0.336);
+  transition: all ease 0.2s;
+}
+nav .menu-btn,
+.menu-icons {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    border-radius: 13px;
+  }
+
+  .menu.active {
+    display: flex;
+    left: 0px;
+    top: 10px;
+    height: 70vh;
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  .menu li {
+    height: 12vh;
+  }
+
+  nav .menu li a {
+    height: 30px;
+    margin-top: 48px;
+  }
+
+  .span_logo{
+    display: none;
+  }
+
+  .span_logo2{
+    display: block;
+    color: #149dff;
+    font-size: 20px;
+    margin-right: 50px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1100px) {
+  .menu-icon {
+    display: block;
+  }
+  nav {
+    justify-content: space-between;
+    height: 65px;
+    padding: 0px 30px;
+  }
+  .logo img {
+    width: 70px;
+  }
+  .header-btns {
+    margin: 0;
+  }
+  .pr-btns {
+    margin: 0;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    background-color: #ffffff;
+    border-bottom: 4px solid #fff491;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .menu li {
+    width: 100%;
+  }
+  nav .menu li a {
+    width: 100%;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 25px;
+    border: 1px solid rgba(38, 38, 38, 0.03);
+    margin-top: 49px;
+  }
+  nav .menu-icons {
+    display: flex;
+    margin-left: 80px;
+  }
+  nav .menu-icon .nav-icon {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 24px;
+  }
+  nav .menu-icon .nav-icon:before,
+  nav .menu-icon .nav-icon:after {
+    background: rgb(255, 255, 255);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all ease-out 0.2s;
+    width: 100%;
+  }
+  nav .menu-icon .nav-icon:before {
+    top: 6px;
+  }
+  nav .menu-icon .nav-icon:after {
+    top: -6px;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  nav .menu-btn {
+    display: none;
+  }
+  nav .menu-btn:checked ~ .menu {
+    display: block;
+  }
+}

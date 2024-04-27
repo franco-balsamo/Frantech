@@ -1,0 +1,96 @@
+.footer {
+    background-color: var(--container-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer__container {
+    padding: 2rem 0 6rem;
+}
+
+.footer__title,
+.footer__link {
+    color: var(--title-color);
+}
+
+.footer__title {
+    text-align: center;
+    color: #6bbcfa;
+    margin-bottom: var(--mb-2);
+}
+
+.footer__link:hover {
+    color: var(--title-color-dark);
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-bottom: var(--mb-2);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.img_footer{
+    width: 7%;
+    position: absolute;
+    left: 36%;
+    margin-top: -28px;
+}
+
+.footer__social-link {
+    background-color: white;
+    color: var(--container-color);
+    font-size: 2.5rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    transform: scale(1.0, 1.0);
+}
+
+.footer__social-link:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.instagram{
+    background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  border-radius: 35%;
+    }
+
+.footer__copy {
+    display: block;
+    margin-top: 4.5rem;
+    color: var(--title-color);
+    text-align: center;
+    font-size: var(--smaller-font-size);
+}
+
+@media screen and (max-width: 992px) {
+    .footer__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .footer__title{
+        margin-left: 48px;
+    }
+    .img_footer{
+        width: 23%;
+        left: 13%;
+    }
+   .footer__social-link {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 2.5rem;
+   }
+}

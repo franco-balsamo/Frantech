@@ -1,0 +1,17 @@
+.mision{
+    background-color: rgb(58, 58, 58);
+}
+
+.mision-h2{
+    color: white;
+}
+
+.mision-span{
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .mision-h2{
+       color: white;
+    }
+}
